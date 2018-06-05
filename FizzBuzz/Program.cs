@@ -39,7 +39,7 @@ namespace FizzBuzz
 
         static void Main(string[] args)
         {
-            var fizzbuzz = Enumerable.Range(1, 500).Select(FizzBuzz);
+            var fizzbuzz = from x in Enumerable.Range(1, 500) select FizzBuzz(x);
             Console.WriteLine(String.Join(", ", fizzbuzz));
 
             Console.ReadKey();
